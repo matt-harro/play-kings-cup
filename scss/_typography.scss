@@ -1,0 +1,5 @@
+@use './variables' as *;
+
+.case-caps {
+  font-size: calc($logo-font-size * 2);
+}

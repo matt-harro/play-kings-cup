@@ -1,0 +1,115 @@
+@use './mixins' as *;
+
+.card {
+  perspective: 150rem;
+  position: absolute;
+  height: 15rem;
+  width: calc(15 / 7 * 5) + rem;
+  // aspect-ratio: calc(5 / 7);
+  transition: transform 0.3s;
+
+  @include respond(phone) {
+    height: 12rem;
+    width: calc(12 / 7 * 5) + rem;
+  }
+
+  // Creates the card circle
+  @for $i from 0 to 52 {
+    &--#{$i} {
+      transform: rotate(calc(345 / 52 * $i) + 15 + deg) translateY(-20rem);
+      z-index: $i;
+
+      @include respond(tablet) {
+        transform: rotate(calc(345 / 52 * $i) + 15 + deg) translateY(-15rem);
+      }
+
+      @include respond(phone) {
+        transform: scale(1.05) rotate(calc(345 / 52 * $i) + 13 + deg)
+          translateY(-10rem);
+      }
+
+      &:hover {
+        transform: scale(1.05)
+          rotate(calc(345 / 52 * $i) + 13 + deg)
+          translateY(-22rem);
+
+        @include respond(tablet) {
+          transform: scale(1.05) rotate(calc(345 / 52 * $i) + 13 + deg)
+            translateY(-17rem);
+        }
+
+        @include respond(phone) {
+          transform: scale(1.05) rotate(calc(345 / 52 * $i) + 13 + deg)
+            translateY(-12rem);
+        }
+      }
+    }
+  }
+
+  &__side {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    transition: all 0.3s;
+
+    &--front {
+      background-image: url();
+      transform: rotateY(-180deg);
+
+      & img {
+        background-size: contain;
+        height: 100%;
+      }
+    }
+
+    &--back {
+      background-image: url('../img/back.png');
+      transform: rotateY(0deg);
+    }
+  }
+}
+
+.rotate {
+  @for $i from 0 to 52 {
+    &--#{$i} {
+      transform: rotate(calc(345 / 52 * $i) + 15 + deg);
+    }
+  }
+}
+
+.turn-over > .card__side--front {
+  transform: rotateY(0deg);
+}
+
+.turn-over > .card__side--back {
+  transform: rotateY(-180deg);
+}
+
+.scale-125 {
+  transform: scale(1.25);
+
+  @include respond(phone) {
+    transform: scale(2) translateY(5rem);
+  }
+}
+
+.card.clicked {
+  @include respond(phone) {
+    z-index: 100;
+  }
+}
+
+.card.discard {
+  @include respond(tablet) {
+    height: 10rem;
+    width: calc(10 / 7 * 5) + rem;
+  }
+
+  @include respond(phone) {
+    position: absolute;
+    bottom: 80%;
+    left: 65%;
+  }
+}

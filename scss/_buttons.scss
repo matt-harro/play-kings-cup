@@ -1,0 +1,134 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.btn {
+  font-size: 2.4rem;
+  padding: 2rem 4rem;
+  border-radius: 100rem;
+  border: none;
+  cursor: pointer;
+
+  box-shadow: $box-shaddow-1;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: $box-shaddow-2;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: $box-shaddow-1;
+    transform: translateY(0px);
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.btn--primary {
+  color: $color-slate-dark;
+  background: $linear-gradient-primary;
+
+  &:hover {
+    background: $linear-gradient-primary--reverse;
+  }
+
+  &:active {
+    background: $linear-gradient-primary;
+  }
+}
+
+.btn--slate {
+  color: white;
+  background: $linear-gradient-slate;
+
+  &:hover {
+    background: $linear-gradient-slate--reverse;
+  }
+
+  &:active {
+    background: $linear-gradient-slate;
+  }
+}
+
+.btn--grey {
+  background: $linear-gradient-grey;
+
+  &:hover {
+    background: $linear-gradient-grey--reverse;
+  }
+
+  &:active {
+    background: $linear-gradient-grey;
+  }
+}
+
+.btn--indigo {
+  color: white;
+  background: $linear-gradient-indigo;
+
+  &:hover {
+    background: $linear-gradient-indigo--reverse;
+  }
+
+  &:active {
+    background: $linear-gradient-indigo;
+  }
+}
+
+.btn--text-shadow {
+  // position: absolute;
+
+  background: $linear-gradient-slate;
+  color: white;
+  transition: all 0.3s;
+
+  &:hover {
+    text-shadow: 0 0 0.5rem $color-primary;
+  }
+}
+
+.btn--small {
+  font-size: 1.8rem;
+  padding: 1rem 3.2rem;
+}
+
+.btn--circle {
+  padding: 2rem 3rem;
+  border-radius: 50%;
+}
+
+.inline-btn-box {
+  display: inline-block;
+  color: $color-indigo-dark;
+  padding: 0.4rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: $box-shaddow-1;
+  transform: skewX(-20deg);
+
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: $box-shaddow-2;
+    transform: skewX(-20deg) translateY(-2px);
+
+    & > a > span {
+      display: inline-block;
+      transform: translateX(2px) scale(1.1);
+      transition: all 0.3s;
+    }
+  }
+}
+
+.inline-btn,
+.inline-btn:link,
+.inline-btn:visited {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.inline-btn.inline-btn--unskew {
+  transform: skewX(20deg);
+}

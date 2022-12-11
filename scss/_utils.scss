@@ -1,0 +1,39 @@
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.h-100p {
+  height: 100% !important;
+}
+
+.h-0p {
+  height: 0% !important;
+}
+
+.w-25p {
+  width: 25% !important;
+}
+
+.op-0 {
+  opacity: 0 !important;
+}
+
+.op-1 {
+  opacity: 1 !important;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}

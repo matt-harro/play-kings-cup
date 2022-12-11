@@ -1,0 +1,87 @@
+//////// @font-family
+$font-primary: 'Cinzel Decorative', cursive;
+// font-family: 'Cinzel Decorative', cursive;
+// font-family: 'Marcellus SC', serif;
+// font-family: 'Uncial Antiqua', cursive;
+
+//////// @font-size
+$logo-font-size: 4.8rem;
+
+//////// color pallet
+
+$color-primary: #fcc419;
+$color-primary-light: #ffe066;
+$color-primary-dark: #fab005;
+
+$color-grey: #ced4da;
+$color-grey-light: #dee2e6;
+$color-grey-dark: #adb5bd;
+
+$color-slate: #343a40;
+$color-slate-dark: #212529;
+$color-slate-light: #495057;
+
+$color-indigo: #5c7cfa;
+$color-indigo-light: #748ffc;
+$color-indigo-dark: #4c6ef5;
+
+$color-red: #ff6b6b;
+$color-red-light: #ff8787;
+$color-red-dark: #fa5252;
+
+//////// box-shadows
+
+$box-shaddow-1: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shaddow-2: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+
+$box-shaddow-primary-1: 0 0.5rem 1rem rgba(252, 195, 25, 0.5);
+$box-shaddow-primary-2: 0 1rem 1.5rem rgba(252, 195, 25, 0.5);
+
+//////// linear-gradient
+
+$linear-gradient-primary: linear-gradient(
+  to bottom right,
+  $color-primary-dark,
+  $color-primary-light
+);
+$linear-gradient-primary--reverse: linear-gradient(
+  to top left,
+  $color-primary-dark,
+  $color-primary-light
+);
+
+$linear-gradient-grey: linear-gradient(
+  to bottom right,
+  $color-grey-dark,
+  $color-grey-light
+);
+
+$linear-gradient-grey--reverse: linear-gradient(
+  to top left,
+  $color-grey-dark,
+  $color-grey-light
+);
+
+$linear-gradient-slate: linear-gradient(
+  to bottom right,
+  $color-slate-dark,
+  $color-slate-light
+);
+
+$linear-gradient-slate--reverse: linear-gradient(
+  to top left,
+  $color-slate-dark,
+  $color-slate-light
+);
+
+$linear-gradient-indigo: linear-gradient(
+  to bottom right,
+  $color-indigo-dark,
+  $color-indigo-light
+);
+
+$linear-gradient-indigo--reverse: linear-gradient(
+  to top left,
+  $color-indigo-dark,
+  $color-indigo-light
+);

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construction zone</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Marcellus+SC&family=Press+Start+2P&family=Uncial+Antiqua&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="builder.js"></script>
+  </head>
+  <body>
+    <div class="root">
+      <button class="btn btn--indigo rules__edit-btn hidden">
+        📝 Edit Rules
+      </button>
+      <div class="rules-section overlay">
+        <form action="submit" class="form rules__form">
+          <div class="rules__close-btn">X</div>
+          <div class="rules__select-box">
+            <label class="rules__select-label" for="rules-select"
+              >Select Rules</label
+            >
+            <select
+              class="rules__select-input"
+              name="rulesets"
+              id="rules-select"
+            >
+              <option value="OG">OG</option>
+              <option value="SFB">SFB</option>
+              <option value="CUSTOM">CUSTOM</option>
+            </select>
+          </div>
+
+          <div class="rules__editor-box">
+            <div class="rules__rule-box">
+              <label class="rules__label" for="ACE">ACE: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="ACE"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="ACE"
+                  class="rules__input-instructions"
+                  data-val="ACE"
+                  data-arrindex="1"
+                  placeholder="enter a description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="TWO">TWO: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="2"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="TWO"
+                  class="rules__input-instructions"
+                  data-val="2"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="THREE">THREE: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="3"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="THREE"
+                  class="rules__input-instructions"
+                  data-val="3"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="FOUR">FOUR: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="4"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="FOUR"
+                  class="rules__input-instructions"
+                  data-val="4"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="FIVE">FIVE: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="5"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="FIVE"
+                  class="rules__input-instructions"
+                  data-val="5"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="SIX">SIX: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="6"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="SIX"
+                  class="rules__input-instructions"
+                  data-val="6"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="SEVEN">SEVEN: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="7"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="SEVEN"
+                  class="rules__input-instructions"
+                  data-val="7"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="EIGHT">EIGHT: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="8"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="EIGHT"
+                  class="rules__input-instructions"
+                  data-val="8"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="NINE">NINE: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="9"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="NINE"
+                  class="rules__input-instructions"
+                  data-val="9"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="TEN">TEN: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="10"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="TEN"
+                  class="rules__input-instructions"
+                  data-val="10"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="JACK">JACK: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="JACK"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="JACK"
+                  class="rules__input-instructions"
+                  data-val="JACK"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules__rule-box">
+              <label class="rules__label" for="QUEEN">QUEEN: </label>
+              <div class="rules__input-box">
+                <input
+                  class="rules__input-title"
+                  type="text"
+                  data-val="QUEEN"
+                  data-arrindex="0"
+                  placeholder="Rule name (required)"
+                  required
+                />
+                <textarea
+                  name="QUEEN"
+                  class="rules__input-instructions"
+                  data-val="QUEEN"
+                  data-arrindex="1"
+                  placeholder="description (optional)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="rules_rule-box">
+              <p>👑 KING: this rule won't change 💯</p>
+            </div>
+            <button type="submit" class="btn btn--slate">💾 Save Rules</button>
+            <p class="notice">
+              Officially add your rule variations to the game - coming soon
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

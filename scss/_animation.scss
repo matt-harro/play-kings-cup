@@ -1,0 +1,150 @@
+@use './variables' as *;
+
+.animate__shrink {
+  animation: shrink 1s ease-out 0.3s 1 forwards;
+}
+
+.animate__blur-fade {
+  animation: blur-fade 0.3s ease-out 0.3s 1 forwards;
+}
+
+.animate__glow {
+  animation: glow 1.5s ease-in infinite;
+}
+
+.animate__fade-in-top {
+  animation: fade-in-top 1s ease-out 0s 1 forwards;
+}
+
+.animate__fade-out {
+  animation: fade-out 1s ease-out 0s 1 normal forwards;
+}
+
+.animate__fade-out--delay-5 {
+  animation: fade-out 1s ease-out 5s 1 normal forwards;
+}
+
+.animate__fade-in {
+  animation: fade-in 1s ease-out 0s 1 normal forwards;
+}
+
+.animate__fade-in--delay-1 {
+  animation: fade-in 1s ease-out 1s 1 normal forwards;
+}
+
+.animate__ghost-grow-fade-in {
+  animation: ghost-grow-fade-in 2s 0s 1 normal forwards;
+}
+.animate__ghost-shrink-fade-out {
+  animation: ghost-grow-fade-in 2s 0s 1 normal forwards;
+}
+
+.animate__width-spread {
+  animation: width-spread 1s ease-out 0s 1 normal backwards;
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes blur-fade {
+  0% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: $box-shaddow-primary-1;
+  }
+  50% {
+    box-shadow: $box-shaddow-primary-2;
+    transform: translateY(-2px);
+  }
+  100% {
+    box-shadow: $box-shaddow-primary-1;
+  }
+}
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    // display: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ghost-grow-fade-in {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes ghost-grow-fade-out {
+  0% {
+    height: auto;
+    opacity: 1;
+  }
+  50% {
+    height: auto;
+    opacity: 0;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes width-spread {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}

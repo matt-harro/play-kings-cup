@@ -1,0 +1,75 @@
+@use './mixins' as *;
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-section {
+  position: relative;
+  height: 40vh;
+  width: 100vw;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.age-section {
+  font-size: 2.4rem;
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 5rem;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.play-section {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.card-section {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+
+  @include respond(tablet) {
+    padding-top: 10rem;
+  }
+
+  @include respond(phone) {
+    padding-top: 17rem;
+  }
+}
+
+.form-section {
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  z-index: 200;
+}
+
+.rules-section {
+  height: 100vh;
+  width: 100vh;
+  z-index: 400;
+}
